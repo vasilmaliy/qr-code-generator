@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <script type="text/javascript" src="scripts/qrcode.js"></script>
+    <title>QR code</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="card">
+        <h1 class="title">QR Code Generator</h1>
+        <div class="qr-code-wrapper">
+          <div id="qrcode" class="qrcode"></div>
+        </div>
+        <div class="card__form-wrapper">
+          <h3 class="subtitle">Enter your website or text</h3>
+          <textarea class="textarea" id="textarea" maxlength="250"></textarea>
+
+          <div class="output-bottom">
+            <p class="character-counter"><span id="numberOfCharacters">0</span>/250</p>
+            <button id="create-qr-btn" class="create-qr-btn">create</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="scripts/main.js"></script>
+  </body>
+</html>
