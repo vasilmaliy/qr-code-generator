@@ -1,22 +1,39 @@
 :root {
   --border-radius-large: 16px;
   --spacing-small: 10px;
-
+  --clr-white-blue: #d6e2f0;
+  --clr-light: #ffffff;
+  --clr-dark: #ffffff;
   --color-blue: #2c7dfa;
+  --clr-dark-mode-btn: #373737;
+  --clr-subtitle: rgb(123, 135, 157);
+
+  --foreground: var(--clr-light);
+  --background: var(--clr-white-blue);
+}
+
+.darkmode {
+  --clr-light: #C9D1DB;
+  --clr-dark: #03527E;
+  --clr-subtitle: rgb(0, 0, 0);
+  
+  --clr-dark-mode-btn: #C9D1DB;
+  --foreground: var(--clr-light);
+  --background: var(--clr-dark);
 }
 
 .main-container {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(214, 226, 240);
+  background-color: var(--background);
   display: grid;
   place-items: center;
 }
 
 .card {
   width: 340px;
-  background-color: #fff;
+  background-color: var(--foreground);
   /* margin: 0px auto; */
   padding: 16px;
   border-radius: var(--border-radius-large);
@@ -57,7 +74,7 @@
 .subtitle {
   font-size: 18px;
   font-weight: 500;
-  color: rgb(123, 135, 157);
+  color: var(--clr-subtitle);
   margin: 15px 0px 10px 0px;
 }
 
@@ -68,7 +85,7 @@
   box-sizing: border-box;
   border: 1px solid #dfdfdf;
   border-radius: 4px;
-  background-color: #f7f7f7;
+  background-color: #ececec;
   font-size: 16px;
   resize: none;
 }
@@ -89,7 +106,7 @@
 .create-qr-btn {
   width: 100px;
   height: 35px;
-  color: white;
+  color: #ffffff;
   background-color: var(--color-blue);
   border-radius: 5px;
 
@@ -100,4 +117,19 @@
 .character-counter {
   color: #000000;
   /* transition: all 6s; */
+}
+
+.dark-mode-toggle {
+  position: absolute;
+  z-index: 100;
+  top: 1em;
+  right: 1em;
+  color: var(--clr-dark-mode-btn);
+  border: 2px solid currentColor;
+  padding: 4px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
 }
